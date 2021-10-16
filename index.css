@@ -1,0 +1,16 @@
+body {
+    font-size: 16px;
+}
+
+.cristorey{
+    font-size: .5em;
+}
+
+.cristorey .div{
+    font-size: 1rem;
+}
+
+/*$smallBreakpoint: 576px;
+$mediumBreakpoint: 768px;
+$largeBreakpoint: 992px;
+$ExtraLargeBreakpoint: 1200px;*/

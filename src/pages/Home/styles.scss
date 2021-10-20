@@ -1,0 +1,106 @@
+.banner {
+    height: 450px;
+    background-image: url(../../assets/images/nav.jpg);
+    background-size: cover;
+    background-position-y: center;
+    position: relative;
+    display: flex;
+
+    .overlay {
+        background: rgba(0, 0, 0, 0.2);
+        background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }
+
+    .container {
+        color: white;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+
+        .body {
+            width: 400px;
+            color: black;
+            background-color: white;
+            border-radius: 3px;
+            padding: 15px 20px 20px 20px;
+            border-left: 5px solid #d91503;
+
+            h1 {
+                margin-bottom: 10px;
+            }
+            p {
+                margin-bottom: 15px;
+            }
+            button {
+                background-color: #336500;
+                color: white;
+                border: 0;
+                padding: 10px 20px;
+                border-radius: 3px;
+                font-size: 0.9em;
+            }
+        }
+    }
+}
+
+.bottomBanner {
+    padding: 25px;
+    background-image: url(../../assets/images/so-white.png);
+    background-image: url(../../assets/images/school.png);
+
+    .card {
+        padding: 15px;
+        grid-column: span 4;
+        display: flex;
+        flex-direction: column;
+        font-size: 0.9em;
+
+        p {
+            margin-top: 10px;
+        }
+    }
+}
+
+.section {
+    .card {
+        grid-column: span 6;
+        display: flex;
+        font-size: 0.9em;
+
+        .left-image {
+            width: 200px;
+            height: 160px;
+            object-fit: cover;
+        }
+        .body-card {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+
+            p {
+                margin-top: 10px;
+                flex-grow: 1;
+            }
+            a {
+                margin-top: 10px;
+            }
+        }
+    }
+
+    .footerSection {
+        grid-column: span 12;
+        text-align: center;
+
+        button {
+            background-color: #336500;
+            color: white;
+            border: 0;
+            padding: 10px 20px;
+            border-radius: 3px;
+            font-size: 0.9em;
+        }
+    }
+}

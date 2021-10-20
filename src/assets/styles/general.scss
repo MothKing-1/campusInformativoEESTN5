@@ -1,0 +1,81 @@
+$smallBreakpoint: 576px;
+$mediumBreakpoint: 768px;
+$largeBreakpoint: 992px;
+$ExtraLargeBreakpoint: 1200px;
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,900;1,300&display=swap');
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #f5f5f7;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    color: black;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+
+    @media (min-width: $smallBreakpoint){
+        max-width: 540px;
+    }
+    @media (min-width: $mediumBreakpoint){
+        max-width: 720px;
+    }
+    @media (min-width: $largeBreakpoint){
+        max-width: 960px;
+    }
+    @media (min-width: $ExtraLargeBreakpoint){
+        max-width: 1140px;
+    }
+}
+
+.row{
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    column-gap: 15px;
+    row-gap: 20px;
+
+    .title {
+        grid-column: span 12;
+        text-align: center;
+    }
+}
+
+.card {
+    display: flex;
+    background-color: white;
+    border: 1px solid #e2eded;
+    border-color: #eaf1f1 #e4eded #dbe7e7;
+    border-radius: 3px;
+    overflow: hidden;
+}

@@ -36,6 +36,7 @@
         "react/jsx-indent-props": ["error", 4],
         "no-use-before-define": ["error", { "variables": false, "functions": false, "classes": false }],
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
-        "object-curly-newline": 0
+        "object-curly-newline": 0,
+        "prefer-destructuring": 0
     }
 }

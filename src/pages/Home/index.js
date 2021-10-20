@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 
 import './styles.scss';
@@ -6,13 +6,18 @@ import NoticeImage1 from '../../assets/images/notice1.jpg';
 import NoticeImage2 from '../../assets/images/notice2.jpg';
 import NoticeImage3 from '../../assets/images/notice3.jpg';
 import NoticeImage4 from '../../assets/images/notice4.jpg';
+import Banner from '../../assets/images/nav.jpg';
 
 function Home() {
+    const slideshow = useRef(null);
+
+    console.log(slideshow);
+
     return (
         <>
-            <div className="banner">
-                <div className="container">
-                    <div className="body">
+            <div className="carousel">
+                {/* <div className="container">
+                    <div className="slide">
                         <h1>Lorem ipsum dolor sit</h1>
                         <p>
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -21,9 +26,24 @@ function Home() {
                         </p>
                         <button type="button">Buenas</button>
                     </div>
+                </div> */}
+                <div className="slideshow" ref={slideshow}>
+                    <div className="slide">
+                        <img src={Banner} alt="Escuela Tecnica Nº5" />
+                    </div>
+                </div>
+
+                <div className="controls">
+                    <button type="button">
+                        <i className="fas fa-chevron-left" />
+                    </button>
+                    <button type="button">
+                        <i className="fas fa-chevron-right" />
+                    </button>
                 </div>
                 <div className="overlay" />
             </div>
+
             <div className="bottomBanner">
                 <div className="container">
                     <div className="row">
@@ -51,12 +71,12 @@ function Home() {
                     </div>
                 </div>
             </div>
-            <div className="section">
+            <div className="section" id="sec1">
                 <div className="container">
                     <div className="row">
-                        <h1 className="title">
-                            Ultimas noticias
-                        </h1>
+                        <h2 className="title">
+                            Ultimas novedades y eventos
+                        </h2>
                         <div className="card">
                             <img src={NoticeImage1} alt="" className="left-image" />
                             <div className="body-card">
